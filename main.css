@@ -1,0 +1,115 @@
+body {
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  position: relative;
+}
+
+.card {
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  background-color: #222;
+  padding: 5px 5px 10px 5px;
+}
+
+.card .stat {
+  flex-direction: row;
+  flex-grow: 1;
+  height: calc(1em + 2px);
+  max-height: calc(1em + 2px);
+  margin-bottom: 5px;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.card .atk {
+  flex-grow: 1;
+  background-color: crimson;
+}
+
+.card .cost {
+  flex-grow: 2;
+  margin: 0 5px;
+  background-color: cornflowerblue;
+}
+
+.card .def {
+  flex-grow: 1;
+  background-color: burlywood;
+}
+
+.card .name {
+  flex-grow: 1;
+  height: calc(1em + 5px);
+  max-height: calc(1em + 5px);
+  background-color: #ccc;
+  margin-bottom: 5px;
+}
+
+.card .image {
+  flex-grow: 1;
+  height: 100px;
+  max-height: 100px;
+  background-color: #ccc;
+  margin-bottom: 5px;
+}
+
+.card .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .text {
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #ccc;
+  padding: 5px;
+  justify-content: flex-start;
+}
+
+.card .text .tags {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card .text .tags,
+.card .text .effects {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.card .faction {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  justify-content: center;
+}
+
+.card .faction > * {
+  background-color: #222;
+  padding: 5px;
+  color: #ccc;
+  font-size: 12px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.card .name,
+.card .atk,
+.card .cost,
+.card .def {
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
