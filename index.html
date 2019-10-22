@@ -4,22 +4,28 @@
   <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 <body>
-  <div class="card">
-    <div class="stat">
-      <div class="atk">4</div>
-      <div class="cost">5</div>
-      <div class="def">6</div>
+  <div class="hand"></div>
+
+  <script type="text/html" id="card_template">
+    <div class="card {{type}}">
+      <div class="stat">
+        <div class="atk">{{atk}}</div>
+        <div class="cost">{{cost}}</div>
+        <div class="def">{{def}}</div>
+      </div>
+      <div class="name">{{name}}</div>
+      <div class="image">
+        <img src="{{img}}">
+      </div>
+      <div class="text">
+        <div class="tags">{{tags}}</div>
+        {{#effects}}
+          <div class="effects">{{{text}}}</div>
+        {{/effects}}
+      </div>
+      <div class="faction"><div>{{faction}}</div></div>
     </div>
-    <div class="name">Qwerty, Keyboard Warrior</div>
-    <div class="image">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2P83W65dKUMRGokXp7roSycLBfIqpsSDeFQT7I7NYYGhEGVqzuw">
-    </div>
-    <div class="text">
-      <div class="tags">Ward. Bane. Storm.</div>
-      <div class="effects"><strong>Last Word: </strong>Deal 2 damage to all enemy follower.</div>
-    </div>
-    <div class="faction"><div>Dragon</div></div>
-  </div>
+  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>

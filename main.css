@@ -14,9 +14,10 @@ div {
 .card {
   flex-direction: column;
   width: 200px;
-  height: 250px;
+  height: 300px;
   background-color: #222;
   padding: 5px 5px 10px 5px;
+  margin: 5px;
 }
 
 .card .stat {
@@ -45,6 +46,15 @@ div {
   background-color: burlywood;
 }
 
+.card.spell .atk,
+.card.spell .def {
+  flex-grow: 0;
+}
+
+.card.spell .cost {
+  margin: 0;
+}
+
 .card .name {
   flex-grow: 1;
   height: calc(1em + 5px);
@@ -55,8 +65,8 @@ div {
 
 .card .image {
   flex-grow: 1;
-  height: 100px;
-  max-height: 100px;
+  height: 150px;
+  max-height: 150px;
   background-color: #ccc;
   margin-bottom: 5px;
 }
@@ -64,6 +74,7 @@ div {
 .card .image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .card .text {
@@ -112,4 +123,8 @@ div {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+
+.hand {
+  flex-wrap: wrap;
 }
